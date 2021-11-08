@@ -1,0 +1,194 @@
+@import "variables";
+@import "mixins";
+
+@media screen and (max-width: 767px){
+    header{
+        @include flex-center;
+        width: inherit;
+        .logo, .position, nav {
+            width: inherit;
+        }
+        .logo{
+            height: 3rem;
+            img {
+                width: 40%;
+                height: 1.5rem;
+                margin-top: 0.75rem;
+            }
+        }
+        .position {
+            background-color:rgb(234, 234, 234);
+            height: 3rem;
+            line-height: 3rem;
+            i {
+                margin-right: 1rem;
+            }
+        }
+
+        nav {
+            @include flex-center;
+            background-color:$couleur-gris-clair;
+            padding:0 1rem 3rem 1rem;
+            h2,.description, .lien-btn, .lien-btn {
+                width: 100%;
+            }
+
+            .lien-btn {
+                margin-top: 2rem;
+                height: 3rem;
+                a {
+                    @include border-radius-all(3rem);
+                    text-decoration: none;
+                    color: white;
+                    margin: auto;
+                    display: block;
+                    width: 70%;
+                    height: inherit;
+                    line-height: 3rem;
+                    background: linear-gradient($couleur-secondaire, $couleur-primaire);
+                }
+            } 
+        }
+    }
+
+    main {
+        width: inherit;
+        background-color: $couleur-gris-clair;
+        @include flex-left;
+
+        .fonctionnement {
+            padding:0 1rem 3rem 1rem;
+            background-color: white;
+            width: 100%;
+            .filtre-conteneur {
+                width: 100%;
+                padding: 0 0 1rem 1rem;
+                .filtre {
+                    height: 4rem;
+                    width: 100%;
+                    background-color: $couleur-gris-clair;
+                    line-height: 4rem;
+                    margin-bottom: 1rem;
+                    font-size: 0.9rem;
+
+                    @include border-radius-all(1rem);  
+                    @include box-shadow-gray();  
+                    
+                    i{
+                        color: gray;
+                        margin:0 1rem 0 2rem;
+                        &:active{
+                            color: $couleur-primaire;
+                        }
+                    }
+                    
+                    .badge{
+                        @include border-radius-all(50%);  
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        line-height: 1.5rem;
+                        padding-left: 0.5rem;
+                        margin-top:1.2rem;
+                        margin-left: -0.75rem;
+                        position: absolute;
+                        background-color: $couleur-primaire;
+                        color: white;
+                        float: left;
+                    }          
+                 }
+            }
+        }
+
+        .restaurants {
+            width: 100%;
+            padding:0 1rem 3rem 1rem;
+            .carte-conteneur {
+                width: 100%;
+                @include flex-left;
+                .carte {
+                    width: 100%;
+                    background-color: white;
+                    @include border-radius-all(1rem);
+                    margin-bottom: 1rem;
+                    a{
+                        text-decoration: none;
+                        width: 100%;
+                        .image-box {
+                            width: 100%;
+                            height: 10rem;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit:cover;
+                                @include border-radius-top(1rem);
+                            }
+                            .badge {
+                                @include border-radius-all(0.2rem);
+                                background-color: #99E2D0ed;
+                                color:green;
+                                width: 4rem;
+                                height: 1.3rem;
+                                line-height: 1.3rem;
+                                font-size: 0.7rem;
+                                text-align: center;
+                                position: absolute;
+                                top: 0.7rem;
+                                right: 0.7rem;
+                            }
+                        }
+                        .description{
+                            width: 100%;
+                            position: relative;
+                            padding: 1rem;
+                            color: black;
+                            .description-titre {
+                               font-weight: bolder;
+                            }
+                            i {
+                                position: absolute;
+                                top: 1rem;
+                                right: 1rem;
+                                font-size: 1.2rem;
+                                &.fa-heart{
+                                    color: transparent;
+                                } 
+                            }
+                        }
+                        &:active{
+                            .description i{
+                                @include text-gradient();
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: rgb(53,53,53);
+        color: white;
+        padding:1rem;
+        .logo {
+            font-size: 1.2rem;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                margin-bottom: 0.5rem;
+                i{
+                    margin-right: 1rem;
+                    &.fa-handshake{
+                        font-size: 0.6rem;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                } 
+            }
+        }
+    }
+}
