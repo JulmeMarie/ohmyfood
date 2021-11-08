@@ -43,7 +43,6 @@
           height: inherit;
           line-height: 3rem;
           background: linear-gradient(#FF79DA, #9356DC); }
-
   main {
     width: inherit;
     background-color: #f6f6f6;
@@ -150,7 +149,6 @@
               background: -webkit-linear-gradient(#FF79DA, #9356DC);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent; }
-
   footer {
     background-color: #353535;
     color: white;
@@ -169,5 +167,3 @@
         footer ul li a {
           text-decoration: none;
           color: white; } }
-
-/*# sourceMappingURL=telephone.css.map */
