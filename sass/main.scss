@@ -1,0 +1,23 @@
+//vendors
+@import "vendors/normalize";
+//utils
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/keyframes"; 
+@import"utils/mixins-menu";
+//base
+@import "base/font-roboto";
+@import "base/font-shrikhand";
+//component
+@import "components/ancreComponent";
+@import "components/badgeComponent";
+@import "components/boutonComponent";
+@import "components/imageComponent";
+@import "components/logoComponent";
+// layouts
+@import "layouts/carte-layout.scss";
+@import "layouts/fonctionnement-layout";
+@import "layouts/footer-layout";
+@import "layouts/header-layout";
+@import "layouts/presentation-layout";
+@import "layouts/restaurants-layout";

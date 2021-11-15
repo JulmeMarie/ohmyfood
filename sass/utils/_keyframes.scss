@@ -1,0 +1,15 @@
+@keyframes menu_apparition_KF {
+    from {
+        margin-top: 4em; 
+    }
+    to { margin-top: 1em;}
+}
+
+@keyframes rotation_KF {
+    from{
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

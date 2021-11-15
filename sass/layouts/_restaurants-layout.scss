@@ -1,0 +1,95 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.restaurants {
+    padding:0 1.3rem 1rem 1.3rem;
+    width: 100%;
+}
+
+.restaurants__conteneur {
+    @include flex-left;
+}
+
+.restaurants-carte__image {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+
+    .restaurants-carte__img{
+        @include dimension-fulfilled();
+        @include border-radius-top(1rem);
+    }
+
+    .restaurants-carte__badge {
+        @include border-radius-all(0.2rem);
+        background-color: #99E2D0ed;
+        color:green;
+        width: 4rem;
+        height: 1.3rem;
+        line-height: 1.3rem;
+        font-size: 0.7rem;
+        top: 0.7rem;
+        right: 0.7rem;
+    }
+}
+
+.restaurants-carte__description{
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    color: black;
+
+    .restaurants-carte__fa {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.2rem;
+        &.fa-heart{
+            color: transparent;
+        }
+        &:active, &:hover {                                
+            @include text-gradient();
+            }  
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .restaurants {
+        width: 99.7%;
+
+        .restaurants__conteneur{
+            width: inherit;
+            justify-content: space-between;
+                
+            .restaurants__carte{
+                width: 20rem;
+                margin-bottom: 1rem;
+
+                .restaurants-carte__image {
+                    height: 18rem;
+                }
+            }
+        }
+    }
+}
+
+/** Style pour tablette*/
+@media screen and (min-width:768px) and (max-width: 991px){
+    .restaurants__carte{
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .restaurants-carte__image {
+            height: 18rem;
+        }
+    }    
+}
+
+/** Style pour téléphone */
+@media screen and (max-width: 767px){
+    .restaurants__carte{
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}

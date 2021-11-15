@@ -1,129 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>Menu le délice des sens</title>
+  <head>
+    <title>Dynamisez une page web avec des animationsCSS</title>
     <meta charset="utf-8" />
+    <!-- Permet l'adaptation de la surface aux tablettes et mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6726bc436f.js" crossorigin="anonymous"></script>
-    <link href='http://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" media="screen" href="css/style.css" type="text/css" />
-    <!--Style commun-->
-    <link rel="stylesheet" media="screen and (min-width: 992px)" href="css/ordinateur.css" type="text/css" />
-    <!-- ordinateur-->
-    <link rel="stylesheet" media="screen and (min-width:768px) and (max-width: 991px)" href="css/tablette.css"
-        type="text/css" />
-    <!-- Tablette-->
-    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/telephone.css" type="text/css" />
-    <!-- telephone -->
-</head>
-<body>
+    <link rel="stylesheet" media="screen" href="../dist/css/style.css" type="text/css" />
+  </head>
+  <body>
     <!-- Entête de la page -->
     <header>
-        <a href="../index.html"><i class="fa fa-arrow-left"></i></a>
-        <div id="logo"><img src="../images/logo/ohmyfood.png" alt=""></div>
-        <div id="image-restaurant">
-            <img src="" alt="">
-            <div id="legende"> 
-                <h1>Le délice des sens</h1>
-                <i class="fa fa-heart-o"></i>
+        <div class="logo header__logo">
+            <div class="header-goback">
+                <a class="ancre header-goback__ancre" href="../index.html">
+                    <i class="fa fa-arrow-left header-goback__fa"></i>
+                </a>
             </div>
+            <div class="image header-logo__image">
+                <img class="img header-logo__img" src="../dist/images/logo/ohmyfood.png" alt="" />
+            </div>  
+        </div>
+        <div class="image header__image">
+            <img class="img header-image__img" src="../dist/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
         </div>
     </header>
 
     <!--corps de la page-->
-    <main>
-        <section id="entrees">
-            <h3>ENTREES</h3>
-            <div class="menu-conteneur">
-                <div class="menu-entrees">
-                    <h5>Tartare de thon</h5>
-                    <div>Assaisonné au yuzu</div>
-                    <div>25€</div>
-                     <div><i class="fa fa-check"></i></div>
+    <main class="presentation">
+        <div class="description presentation__description"> 
+            <h2 class="presentation-description__titre">Le délice des sens </h2>
+            
+            <i class="fa fa-heart-o presentation-description__fa"></i>
+        </div>
+        <section class="entrees presentation__entrees">
+            <h3 class="presentation__titre-3">ENTREES</h3>
+            <hr class="hr presentation__hr">
+            <div class="conteneur presentation__conteneur">
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Tartare de thon</div>
+                    <div class="description presentation-carte__description">Assaisonné au yuzu </div>
+                    <div class="prix presentation-carte__prix">25€</div>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>  
                 </div>
-                <div class="menu-entrees">
-                    <h5>Bouchée de homard croustillant </h5>
-                    <div>Et sa farandole de petits légumes</div>
-                    <div>35€</div>
-                     <div><i class="fa fa-check"></i></div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Bouchée de homard croustillant </div>
+                    <div class="description presentation-carte__description">Et sa farandole de petits légumes</div>
+                    <div class="prix presentation-carte__prix">35€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
                 </div>
-                <div class="menu-entrees">
-                    <h5>Velouté de cèpes </h5>
-                    <div>Aux truffes</div>
-                    <div>20€</div>
-                     <div><i class="fa fa-check"></i></div>
-                </div>
-            </div>
-        </section>
-        <section id="plats">
-            <h3>PLATS</h3>
-            <div class="menu-conteneur">
-                <div class="menu-plats">
-                    <h5>Poulet rôti aux herbes de Provence </h5>
-                    <div>Et sa crème de truffe</div>
-                    <div>40€</div>
-                     <div><i class="fa fa-check"></i></div>
-                </div>
-                <div class="menu-plats">
-                    <h5>Langouste rôtie </h5>
-                    <div>Et ses légumes de saison </div>
-                    <div>35€ </div>
-                     <div><i class="fa fa-check"></i></div>
-                </div>
-                <div class="menu-plats">
-                    <h5>Côte de boeuf Angus</h5>
-                    <div>Et sa purée de panais</div>
-                    <div>44€</div>
-                     <div><i class="fa fa-check"></i></div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Velouté de cèpes </div>
+                    <div class="description presentation-carte__description">Aux truffes</div>
+                    <div class="prix presentation-carte__prix">20€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="desserts">
-            <h3>DESSERTS</h3>
-            <div class="menu-conteneur">
-                <div class="menu-desserts">
-                    <h5>Farandole de desserts</h5>
-                    <div>Du chef</div>
-                    <div>18€</div>
-                    <div><i class="fa fa-check"></i></div>
+        
+        <section class="plats presentation__plats">
+            <h3 class="presentation__titre-3">PLATS</h3>
+            <hr class="hr presentation__hr">
+            <div class="conteneur presentation__conteneur">
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Poulet rôti aux herbes de Provence </div>
+                    <div class="description presentation-carte__description">Et sa crème de truffe</div>
+                    <div class="prix presentation-carte__prix">40€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
                 </div>
-                <div class="menu-desserts">
-                    <h5>Crème brulée </h5>
-                    <div>Revisitée</div>
-                    <div>22€</div>
-                     <div><i class="fa fa-check"></i></div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Langouste rôtie</div>
+                    <div class="description presentation-carte__description">Et ses légumes de saison</div>
+                    <div class="prix presentation-carte__prix">35€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
                 </div>
-                <div class="menu-desserts">
-                    <h5>Tiramisu</h5>
-                    <div>À la noisette</div>
-                    <div>23€</div>
-                     <div><i class="fa fa-check"></i></div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Côte de boeuf Angus </div>
+                    <div class="description presentation-carte__description">Et sa purée de panais</div>
+                    <div class="prix presentation-carte__prix">44€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
                 </div>
             </div>
         </section>
-        <form action="">
-            <button type="submit">Commander</button>
+        <section class="desserts presentation__desserts">
+            <h3 class="presentation__titre-3">DESSERTS</h3>
+            <hr class="hr presentation__hr">
+            <div class="conteneur presentation__conteneur">
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Farandole de desserts</div>
+                    <div class="description presentation-carte__description">Du chef</div>
+                    <div class="prix presentation-carte__prix">18€</div>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
+                </div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Crème brulée </div>
+                    <div class="description presentation-carte__description">Revisitée</div>
+                    <div class="prix presentation-carte__prix">22€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
+                </div>
+                <div class="carte presentation__carte">
+                    <div class="titre presentation__carte__titre">Tiramisu </div>
+                    <div class="description presentation-carte__description">À la noisette</div>
+                    <div class="prix presentation-carte__prix">23€</div>
+                     <div class="icon presentation-carte__icon">
+                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form class="form presentation__form" action="#">
+            <button class="bouton presentation__bouton" type="submit">Commander</button>
         </form>
     </main>
     <!--pied de la page-->
     <footer>
-        <div>
-            <h3 class="logo">ohmyfood</h3>
-            <ul>
-                <li>
-                    <i class="fa fa-utensils"></i><a href="">Proposer un restaurant</a>
-                </li>
-                <li>
-                    <i class="fa fa-handshake"></i><a href="">Devenir partenaire </a>
-                </li>
-                <li>
-                    <a href=""> Mentions légales</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
+        <div class="conteneur footer__conteneur">
+          <div class="logo footer__logo">ohmyfood</div>
+          <ul class="menu footer__menu">
+            <li class="item footer-menu__item">
+              <i class="fa fa-utensils footer-menu__fa"></i>
+              <a class="ancre footer-menu__ancre" href="">Proposer un restaurant</a>
+            </li>
+            <li class="item footer-menu__item">
+              <i class="fa fa-handshake footer-menu__fa"></i>
+              <a class="ancre footer-menu__ancre" href="">Devenir partenaire </a>
+            </li>
+            <li class="item footer-menu__item">
+              <a class="ancre footer-menu__ancre" href="#"> Mentions légales</a>
+            </li>
+            <li class="item footer-menu__item">
+              <a class="ancre footer-menu__ancre" href="mailto:mariewilnie96@gmail.com">Contact</a>
+            </li>
+          </ul>
         </div>
-    </footer>
+      </footer>
 </body>
 </html>

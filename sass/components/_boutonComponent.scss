@@ -1,0 +1,8 @@
+//je mets du style à mon bouton
+.bouton {
+    color: white;
+    @include border-radius-all(3rem);
+    background: linear-gradient($couleur-secondaire, $couleur-primaire);
+    cursor: pointer;
+    width: 100%;
+}

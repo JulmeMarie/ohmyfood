@@ -1,0 +1,94 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.filtre {
+   @include box-shadow-gray(); 
+}
+.titre {
+    font-weight: bolder;
+}
+
+main {
+    width: inherit;
+    background-color: $couleur-gris-clair;
+    @include flex-left;
+    z-index: 1000;
+}
+
+.fonctionnement {
+    width: 100%;
+    background-color: white;
+    padding:0 1.5rem 1rem 1.5rem;
+
+     
+    .fonctionnement__conteneur {
+        background-color: white;
+        @include flex-left;
+
+        .fonctionnement-conteneur__filtre{
+            height: 4rem;
+            line-height: 4rem;
+            background-color: $couleur-gris-clair;
+            @include border-radius-all(1rem);  
+            
+            .fonctionnement-conteneur__fa{
+                color: gray;
+                &:active, &:hover{
+                    color: $couleur-primaire;
+                }
+            }
+            
+            .fonctionnement-conteneur__badge{
+                width: 1.7rem;
+                height: 1.7rem;
+                line-height: 1.7rem;
+                margin-top:1.3rem;
+                margin-left: -0.8rem;
+                @include border-radius-all(50%);  
+                background-color: $couleur-primaire;
+                color: white;
+                float: left;
+            }   
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        .fonctionnement-conteneur__filtre{
+            margin-bottom: 1rem;
+            margin-right: 1.2rem;
+            font-size: 1rem;
+            padding-right: 1rem;
+    
+            .fonctionnement-conteneur__fa{
+                margin:0 0.5rem 0 1.5rem;
+            } 
+        }     
+    }
+    /** Style pour tablette*/
+    @media screen and (min-width:768px) and (max-width: 991px){
+
+        .fonctionnement-conteneur__filtre{
+            margin-bottom: 1rem;
+            margin-right: 1.2rem;
+            font-size: 1rem;
+            padding-right: 1rem;
+
+            .fonctionnement-conteneur__fa{
+                margin:0 0.5rem 0 1.5rem;
+            } 
+        }  
+    }
+   /** Style pour téléphone */
+    @media screen and (max-width: 767px){
+        .fonctionnement-conteneur__filtre{
+            line-height: 4rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            width: 100%;
+    
+            .fonctionnement-conteneur__fa{
+                margin:0 1rem 0 2rem;
+            }
+        } 
+    }
+}

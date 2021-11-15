@@ -24,8 +24,10 @@
   
   body {
     margin: 0;
-  }
-  
+    font-family: 'Roboto', Arial, sans-serif;
+    width: 100vw;
+    overflow-x:hidden;
+}
   /**
    * Render the `main` element consistently in IE.
    */

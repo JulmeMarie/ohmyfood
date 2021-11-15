@@ -1,0 +1,9 @@
+//je mets du style à aux liens
+.ancre {
+    text-decoration: none;
+    margin: auto;
+    height: inherit;
+    @include dimension-fulfilled();
+ }
+
+ 

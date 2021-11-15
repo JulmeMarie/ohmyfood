@@ -1,0 +1,169 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/mixins-menu";
+header{
+    @include flex-center;
+    width: inherit;
+
+    .header__logo{
+        position: relative;
+        width: inherit;
+    }
+
+    .header-goback__ancre {
+        display: block;
+     }
+
+     .header__image{
+        width: 100%;
+    }
+
+    .header__map {
+        background-color:rgb(234, 234, 234);
+        width: inherit;
+
+        height: 3rem;
+        line-height: 3rem;
+
+        .header-map__fa {
+            margin-right: 1rem;
+        }
+    }
+
+    .header-goback{
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 1000;
+    }
+
+
+    .header-nav {
+        @include flex-center;
+        background-color:$couleur-gris-clair;
+        padding:0 1rem 3rem 1rem;
+        width: inherit;
+
+        .header-nav__titre-2,.header-nav__description { 
+            width: inherit;
+        }
+
+        .header-nav-bouton {
+            margin-top: 2rem;
+            height: 2.5rem;
+            width: 100%;
+
+            .header-bouton__ancre {
+                display: block;
+            }
+        }
+    }
+    
+} 
+/** Style pour ordinateur uniquement**/
+@media screen and (min-width: 992px){
+    .header__logo{
+        height: 5rem;
+
+        .header-goback {
+            @include goback-dimension(4.5rem);
+
+            .header-goback__ancre{
+                display: block;
+                .header-goback__fa{
+                    font-size: 1.2rem;
+
+                }
+            }
+        }
+        .header-logo__image {
+            @include dimension-fulfilled();
+            padding: 1rem;
+            .header-logo__img {
+                height: 100%;
+                width: 18rem;
+            }
+        }
+    }
+
+    
+    .header__image{
+        height: 25rem;
+    }
+  
+    .header-bouton__ancre {
+        line-height: 2.5rem;
+        width: 20rem;
+        font-size: 1.1rem;
+    }
+}
+
+/** Style pour tablette uniquement */
+@media screen and (min-width:768px) and (max-width: 991px){
+    .header__logo{
+        height: 3.5rem;
+
+        .header-goback {
+            @include goback-dimension(3.5rem);
+
+            .header-goback__ancre{
+                display: block;
+                .header-goback__fa{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .header-logo__image {
+            @include dimension-fulfilled();
+            padding: 0.7rem;
+            .header-logo__img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    
+    .header__image{
+        height: 20rem;
+        
+    }
+    .header-bouton__ancre {
+        line-height: 2.5rem;
+        width: 17rem;
+        font-size: 1rem;
+    }
+}
+
+/** Style pour téléphone uniquement */
+@media screen and (max-width: 767px){
+    header{
+        .header__logo{
+            height: 3rem;
+
+            .header-goback {
+                @include goback-dimension(3rem);
+            }
+            .header-logo__image {
+                @include dimension-fulfilled();
+                padding: 0.7rem;
+                .header-logo__img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+        
+        .header__image{
+            height: 15rem;
+        }
+        
+        .header-bouton__ancre {
+            line-height: 2.5rem;
+            width:14rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
