@@ -25,20 +25,19 @@ main {
         background-color: white;
         @include flex-left;
 
-        .fonctionnement-conteneur__filtre{
+        .conteneur__filtre{
             height: 4rem;
             line-height: 4rem;
             background-color: $couleur-gris-clair;
+            @include transition-all;
             @include border-radius-all(1rem);  
             
-            .fonctionnement-conteneur__fa{
+            .conteneur__fa{
                 color: gray;
-                &:active, &:hover{
-                    color: $couleur-primaire;
-                }
+                @include transition-all;
             }
             
-            .fonctionnement-conteneur__badge{
+            .conteneur__badge{
                 width: 1.7rem;
                 height: 1.7rem;
                 line-height: 1.7rem;
@@ -48,18 +47,27 @@ main {
                 background-color: $couleur-primaire;
                 color: white;
                 float: left;
-            }   
+                text-align: center;
+            } 
+            
+            &:hover{
+                background-color: rgba($color: $couleur-primaire, $alpha: 0.1);
+                .conteneur__fa{
+                    @include transition-all;
+                    color: $couleur-primaire;
+                } 
+            }
         }
     }
 
     @media screen and (min-width: 992px){
-        .fonctionnement-conteneur__filtre{
+        .conteneur__filtre{
             margin-bottom: 1rem;
             margin-right: 1.2rem;
             font-size: 1rem;
             padding-right: 1rem;
     
-            .fonctionnement-conteneur__fa{
+            .conteneur__fa{
                 margin:0 0.5rem 0 1.5rem;
             } 
         }     
@@ -67,26 +75,26 @@ main {
     /** Style pour tablette*/
     @media screen and (min-width:768px) and (max-width: 991px){
 
-        .fonctionnement-conteneur__filtre{
+        .conteneur__filtre{
             margin-bottom: 1rem;
             margin-right: 1.2rem;
             font-size: 1rem;
             padding-right: 1rem;
 
-            .fonctionnement-conteneur__fa{
+            .conteneur__fa{
                 margin:0 0.5rem 0 1.5rem;
             } 
         }  
     }
    /** Style pour téléphone */
     @media screen and (max-width: 767px){
-        .fonctionnement-conteneur__filtre{
+        .conteneur__filtre{
             line-height: 4rem;
             margin-bottom: 1rem;
-            font-size: 0.9rem;
+            font-size: 1rem;
             width: 100%;
     
-            .fonctionnement-conteneur__fa{
+            .conteneur__fa{
                 margin:0 1rem 0 2rem;
             }
         } 

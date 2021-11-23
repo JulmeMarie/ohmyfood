@@ -6,17 +6,24 @@ footer {
     background-color: rgb(53,53,53);
     color: white;
 
-    .footer__conteneur{
+    .footer{
         flex-direction: column;
 
-        .footer__menu {
-            margin-top: 1rem;
+        .footer__logo {
+            font-family: $font-family-logo;
+        }
 
-            .footer-menu__item{
+        .footer-menu {
+            margin-top: 1rem;
+            padding: 0;
+            margin: 0;
+
+            .menu__item{
                 margin-bottom: 0.5rem;
                 font-size: 1rem;
+                list-style: none;
         
-                .footer-menu__fa{
+                .menu__fa{
                     margin-right: 1rem;
                     &.fa-handshake{
                         font-size: 0.6rem;
@@ -25,19 +32,12 @@ footer {
             }
         }
 
-        .footer-menu__ancre{
+        .menu__ancre{
             color: white;
         } 
     }
 }
 
-.menu {
-    padding: 0;
-    margin: 0;
- }
- .item {
-     list-style: none;
- }
 
 
  @media screen and (min-width: 992px){
@@ -58,3 +58,4 @@ footer {
         font-size: 1.2rem;
     }
 }
+

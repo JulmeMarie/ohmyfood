@@ -38,3 +38,18 @@
     width: 100%;
     height: 100%;
 }
+
+@mixin afficherPage() {
+    -webkit-animation-name: display_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name:display_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+
+    animation-name: display_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    
+}

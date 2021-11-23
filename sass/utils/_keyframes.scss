@@ -13,3 +13,12 @@
         transform:rotate(360deg);
     }
 }
+
+@keyframes display_KF {
+    from{
+        z-index:0;
+    }
+    to{
+        z-index:1000;
+    }
+}

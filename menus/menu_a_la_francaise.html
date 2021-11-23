@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <title>Dynamisez une page web avec des animationsCSS</title>
     <meta charset="utf-8" />
     <!-- Permet l'adaptation de la surface aux tablettes et mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6726bc436f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" media="screen" href="../dist/css/style.css" type="text/css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Entête de la page -->
     <header>
-        <div class="logo header__logo">
+        <div class="logo">
             <div class="header-goback">
                 <a class="ancre header-goback__ancre" href="../index.html">
                     <i class="fa fa-arrow-left header-goback__fa"></i>
                 </a>
             </div>
-            <div class="image header-logo__image">
-                <img class="img header-logo__img" src="../dist/images/logo/ohmyfood.png" alt="" />
-            </div>  
+            <div class="logo__conteneur">
+                <img class="image logo__image" src="../dist/images/logo/ohmyfood.png" alt="" />
+            </div>
         </div>
-        <div class="image header__image">
-            <img class="img header-image__img" src="../dist/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+        <div class="header-image__conteneur">
+            <img class="image header__image" src="../dist/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
         </div>
     </header>
 
     <!--corps de la page-->
     <main class="presentation">
-        <div class="description presentation__description"> 
+        <div class="description presentation__description">
             <h2 class="presentation-description__titre">À la française </h2>
             <i class="fa fa-heart-o presentation-description__fa"></i>
         </div>
@@ -42,27 +44,27 @@
                     <div class="prix presentation-carte__prix">25€</div>
                     <div class="icon presentation-carte__icon">
                         <i class="fa fa-check-circle presentation-carte__fa"></i>
-                    </div>  
+                    </div>
                 </div>
                 <div class="carte presentation__carte">
                     <div class="titre presentation__carte__titre">Velouté de légumes d'antan</div>
                     <div class="description presentation-carte__description">Carotte, panais, topinambour</div>
                     <div class="prix presentation-carte__prix">35€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
                 <div class="carte presentation__carte">
                     <div class="titre presentation__carte__titre">Soupe à l'oignon</div>
                     <div class="description presentation-carte__description">Revisitée</div>
                     <div class="prix presentation-carte__prix">20€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="plats presentation__plats">
             <h3 class="presentation__titre-3">PLATS</h3>
             <hr class="hr presentation__hr">
@@ -71,24 +73,24 @@
                     <div class="titre presentation__carte__titre">Coquilles Saint-Jacques</div>
                     <div class="description presentation-carte__description">Accompagnées d'une purée de panais</div>
                     <div class="prix presentation-carte__prix">40€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
                 <div class="carte presentation__carte">
                     <div class="titre presentation__carte__titre">Magret de canard</div>
                     <div class="description presentation-carte__description">Et parmentier de pommes de terre</div>
                     <div class="prix presentation-carte__prix">35€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
                 <div class="carte presentation__carte">
                     <div class="titre presentation__carte__titre">Pigeonneau d’Ille-et-Vilainet</div>
                     <div class="description presentation-carte__description">Sur son lit de gnocchis aux légumes</div>
                     <div class="prix presentation-carte__prix">44€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
             </div>
@@ -109,16 +111,16 @@
                     <div class="titre presentation__carte__titre">Fondant au chocolat</div>
                     <div class="description presentation-carte__description">Revisité</div>
                     <div class="prix presentation-carte__prix">22€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
                 <div class="carte presentation__carte">
                     <div class="titre presentation__carte__titre">Millefeuille croustillant</div>
                     <div class="description presentation-carte__description">Myrtilles et pâte d’amande</div>
                     <div class="prix presentation-carte__prix">23€</div>
-                     <div class="icon presentation-carte__icon">
-                         <i class="fa fa-check-circle presentation-carte__fa"></i>
+                    <div class="icon presentation-carte__icon">
+                        <i class="fa fa-check-circle presentation-carte__fa"></i>
                     </div>
                 </div>
             </div>
@@ -129,25 +131,26 @@
     </main>
     <!--pied de la page-->
     <footer>
-        <div class="conteneur footer__conteneur">
-          <div class="logo footer__logo">ohmyfood</div>
-          <ul class="menu footer__menu">
-            <li class="item footer-menu__item">
-              <i class="fa fa-utensils footer-menu__fa"></i>
-              <a class="ancre footer-menu__ancre" href="">Proposer un restaurant</a>
-            </li>
-            <li class="item footer-menu__item">
-              <i class="fa fa-handshake footer-menu__fa"></i>
-              <a class="ancre footer-menu__ancre" href="">Devenir partenaire </a>
-            </li>
-            <li class="item footer-menu__item">
-              <a class="ancre footer-menu__ancre" href="#"> Mentions légales</a>
-            </li>
-            <li class="item footer-menu__item">
-              <a class="ancre footer-menu__ancre" href="mailto:mariewilnie96@gmail.com">Contact</a>
-            </li>
-          </ul>
+        <div class="footer">
+            <div class="footer__logo">ohmyfood</div>
+            <ul class="footer-menu">
+                <li class="menu__item">
+                    <i class="fa fa-utensils menu__fa"></i>
+                    <a class="ancre menu__ancre" href="">Proposer un restaurant</a>
+                </li>
+                <li class="menu__item">
+                    <i class="fa fa-handshake menu__fa"></i>
+                    <a class="ancre menu__ancre" href="">Devenir partenaire </a>
+                </li>
+                <li class="menu__item">
+                    <a class="ancre menu__ancre" href="#"> Mentions légales</a>
+                </li>
+                <li class="menu__item">
+                    <a class="ancre menu__ancre" href="mailto:mariewilnie96@gmail.com">Contact</a>
+                </li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>

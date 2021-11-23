@@ -1,169 +1,181 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 @import "../utils/mixins-menu";
-header{
+.site-chargement {
+    @include dimension-fulfilled;
+    @include flex-center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 40vh;
+    z-index: -1;
+    .chargement__logo {
+        font-family: $font-family-logo;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .chargement__info {
+        font-size: 1rem;
+    }
+    animation-duration:3s;
+    animation-name:display_KF;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+header {
     @include flex-center;
     width: inherit;
-
-    .header__logo{
+    flex-direction: column;
+    .logo__conteneur {
         position: relative;
         width: inherit;
     }
-
     .header-goback__ancre {
         display: block;
-     }
-
-     .header__image{
+    }
+    .header-image__conteneur {
         width: 100%;
     }
-
-    .header__map {
-        background-color:rgb(234, 234, 234);
+    .map {
+        background-color: rgb(234, 234, 234);
         width: inherit;
-
         height: 3rem;
         line-height: 3rem;
-
-        .header-map__fa {
+        .map__fa {
             margin-right: 1rem;
         }
     }
-
-    .header-goback{
+    .header-goback {
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         z-index: 1000;
     }
-
-
-    .header-nav {
+    .nav {
         @include flex-center;
-        background-color:$couleur-gris-clair;
-        padding:0 1rem 3rem 1rem;
+        background-color: $couleur-gris-clair;
+        padding: 0 1rem 3rem 1rem;
         width: inherit;
-
-        .header-nav__titre-2,.header-nav__description { 
+        .nav__titre-2,
+        .nav__description {
             width: inherit;
         }
-
-        .header-nav-bouton {
+        .nav-bouton {
             margin-top: 2rem;
             height: 2.5rem;
             width: 100%;
-
-            .header-bouton__ancre {
+            .nav__ancre {
                 display: block;
-            }
-        }
-    }
-    
-} 
-/** Style pour ordinateur uniquement**/
-@media screen and (min-width: 992px){
-    .header__logo{
-        height: 5rem;
-
-        .header-goback {
-            @include goback-dimension(4.5rem);
-
-            .header-goback__ancre{
-                display: block;
-                .header-goback__fa{
-                    font-size: 1.2rem;
-
+                box-shadow: 0.3rem 0.3rem 0.5rem darkgray;
+                @include transition-all;
+                &:hover {
+                    opacity: 0.9;
+                    @include transition-all;
+                    box-shadow: 0.3rem 0.3rem 0.2rem darkgray;
                 }
             }
         }
-        .header-logo__image {
+    }
+}
+
+
+/** Style pour ordinateur uniquement**/
+
+@media screen and (min-width: 992px) {
+    .logo {
+        height: 5rem;
+        .header-goback {
+            @include goback-dimension(4.5rem);
+            .header-goback__ancre {
+                display: block;
+                .header-goback__fa {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .logo__conteneur {
             @include dimension-fulfilled();
             padding: 1rem;
-            .header-logo__img {
+            .logo__image {
                 height: 100%;
                 width: 18rem;
             }
         }
     }
-
-    
-    .header__image{
+    .header__image {
         height: 25rem;
     }
-  
-    .header-bouton__ancre {
+    .nav__ancre {
         line-height: 2.5rem;
         width: 20rem;
         font-size: 1.1rem;
     }
 }
 
-/** Style pour tablette uniquement */
-@media screen and (min-width:768px) and (max-width: 991px){
-    .header__logo{
-        height: 3.5rem;
 
+/** Style pour tablette uniquement */
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .logo {
+        height: 3.5rem;
         .header-goback {
             @include goback-dimension(3.5rem);
-
-            .header-goback__ancre{
+            .header-goback__ancre {
                 display: block;
-                .header-goback__fa{
+                .header-goback__fa {
                     font-size: 1.2rem;
                 }
             }
         }
-        .header-logo__image {
+        .logo__conteneur {
             @include dimension-fulfilled();
             padding: 0.7rem;
-            .header-logo__img {
+            .logo__image {
                 height: 100%;
                 width: auto;
             }
         }
     }
-    
-    .header__image{
+    .header__image {
         height: 20rem;
-        
     }
-    .header-bouton__ancre {
+    .nav__ancre {
         line-height: 2.5rem;
         width: 17rem;
         font-size: 1rem;
     }
 }
 
-/** Style pour téléphone uniquement */
-@media screen and (max-width: 767px){
-    header{
-        .header__logo{
-            height: 3rem;
 
+/** Style pour téléphone uniquement */
+
+@media screen and (max-width: 767px) {
+    header {
+        .logo {
+            height: 3rem;
             .header-goback {
                 @include goback-dimension(3rem);
             }
-            .header-logo__image {
+            .logo__conteneur {
                 @include dimension-fulfilled();
                 padding: 0.7rem;
-                .header-logo__img {
+                .logo__image {
                     height: 100%;
                     width: auto;
                 }
             }
         }
-        
-        .header__image{
+        .header__image {
             height: 15rem;
         }
-        
-        .header-bouton__ancre {
+        .nav__ancre {
             line-height: 2.5rem;
-            width:14rem;
+            width: 14rem;
             font-size: 1rem;
         }
     }
 }
-
-
-

@@ -1,5 +1,5 @@
 ////je mets du style à mon img
-.img{
-   @include dimension-fulfilled();
-   object-fit:cover;
+.image {
+    @include dimension-fulfilled();
+    object-fit: cover;
 }

@@ -326,6 +326,12 @@ le remplissage (padding), la bordure, mais pas la marge. */
   to {
     transform: rotate(360deg); } }
 
+@keyframes display_KF {
+  from {
+    z-index: 0; }
+  to {
+    z-index: 1000; } }
+
 /******************* POLICE ROBOTO******************/
 /* cyrillic-ext */
 @font-face {
@@ -427,7 +433,7 @@ le remplissage (padding), la bordure, mais pas la marge. */
   cursor: pointer;
   width: 100%; }
 
-.img {
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -471,18 +477,22 @@ main {
     display: flex;
     align-items: start;
     flex-wrap: wrap; }
-    .fonctionnement .fonctionnement__conteneur .fonctionnement-conteneur__filtre {
+    .fonctionnement .fonctionnement__conteneur .conteneur__filtre {
       height: 4rem;
       line-height: 4rem;
       background-color: #f6f6f6;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      transition: all 0.5s linear;
       -webkit-border-radius: 1rem;
       -moz-border-radius: 1rem;
       border-radius: 1rem; }
-      .fonctionnement .fonctionnement__conteneur .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa {
-        color: gray; }
-        .fonctionnement .fonctionnement__conteneur .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa:active, .fonctionnement .fonctionnement__conteneur .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa:hover {
-          color: #9356DC; }
-      .fonctionnement .fonctionnement__conteneur .fonctionnement-conteneur__filtre .fonctionnement-conteneur__badge {
+      .fonctionnement .fonctionnement__conteneur .conteneur__filtre .conteneur__fa {
+        color: gray;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
+      .fonctionnement .fonctionnement__conteneur .conteneur__filtre .conteneur__badge {
         width: 1.7rem;
         height: 1.7rem;
         line-height: 1.7rem;
@@ -493,56 +503,62 @@ main {
         border-radius: 50%;
         background-color: #9356DC;
         color: white;
-        float: left; }
+        float: left;
+        text-align: center; }
+      .fonctionnement .fonctionnement__conteneur .conteneur__filtre:hover {
+        background-color: rgba(147, 86, 220, 0.1); }
+        .fonctionnement .fonctionnement__conteneur .conteneur__filtre:hover .conteneur__fa {
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+          color: #9356DC; }
   @media screen and (min-width: 992px) {
-    .fonctionnement .fonctionnement-conteneur__filtre {
+    .fonctionnement .conteneur__filtre {
       margin-bottom: 1rem;
       margin-right: 1.2rem;
       font-size: 1rem;
       padding-right: 1rem; }
-      .fonctionnement .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa {
+      .fonctionnement .conteneur__filtre .conteneur__fa {
         margin: 0 0.5rem 0 1.5rem; } }
   @media screen and (min-width: 768px) and (max-width: 991px) {
-    .fonctionnement .fonctionnement-conteneur__filtre {
+    .fonctionnement .conteneur__filtre {
       margin-bottom: 1rem;
       margin-right: 1.2rem;
       font-size: 1rem;
       padding-right: 1rem; }
-      .fonctionnement .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa {
+      .fonctionnement .conteneur__filtre .conteneur__fa {
         margin: 0 0.5rem 0 1.5rem; } }
   @media screen and (max-width: 767px) {
-    .fonctionnement .fonctionnement-conteneur__filtre {
+    .fonctionnement .conteneur__filtre {
       line-height: 4rem;
       margin-bottom: 1rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       width: 100%; }
-      .fonctionnement .fonctionnement-conteneur__filtre .fonctionnement-conteneur__fa {
+      .fonctionnement .conteneur__filtre .conteneur__fa {
         margin: 0 1rem 0 2rem; } }
 
 footer {
   padding: 1rem;
   background-color: #353535;
   color: white; }
-  footer .footer__conteneur {
+  footer .footer {
     flex-direction: column; }
-    footer .footer__conteneur .footer__menu {
-      margin-top: 1rem; }
-      footer .footer__conteneur .footer__menu .footer-menu__item {
+    footer .footer .footer__logo {
+      font-family: Shrikhand; }
+    footer .footer .footer-menu {
+      margin-top: 1rem;
+      padding: 0;
+      margin: 0; }
+      footer .footer .footer-menu .menu__item {
         margin-bottom: 0.5rem;
-        font-size: 1rem; }
-        footer .footer__conteneur .footer__menu .footer-menu__item .footer-menu__fa {
+        font-size: 1rem;
+        list-style: none; }
+        footer .footer .footer-menu .menu__item .menu__fa {
           margin-right: 1rem; }
-          footer .footer__conteneur .footer__menu .footer-menu__item .footer-menu__fa.fa-handshake {
+          footer .footer .footer-menu .menu__item .menu__fa.fa-handshake {
             font-size: 0.6rem; }
-    footer .footer__conteneur .footer-menu__ancre {
+    footer .footer .menu__ancre {
       color: white; }
-
-.menu {
-  padding: 0;
-  margin: 0; }
-
-.item {
-  list-style: none; }
 
 @media screen and (min-width: 992px) {
   .footer__logo {
@@ -558,32 +574,59 @@ footer {
   .footer__logo {
     font-size: 1.2rem; } }
 
+.site-chargement {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100vh;
+  flex-direction: column;
+  padding-top: 40vh;
+  z-index: -1;
+  animation-duration: 3s;
+  animation-name: display_KF;
+  animation-timing-function: ease;
+  animation-iteration-count: 1; }
+  .site-chargement .chargement__logo {
+    font-family: Shrikhand;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .site-chargement .chargement__info {
+    font-size: 1rem; }
+
 header {
   display: flex;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  width: inherit; }
-  header .header__logo {
+  width: inherit;
+  flex-direction: column; }
+  header .logo__conteneur {
     position: relative;
     width: inherit; }
   header .header-goback__ancre {
     display: block; }
-  header .header__image {
+  header .header-image__conteneur {
     width: 100%; }
-  header .header__map {
+  header .map {
     background-color: #eaeaea;
     width: inherit;
     height: 3rem;
     line-height: 3rem; }
-    header .header__map .header-map__fa {
+    header .map .map__fa {
       margin-right: 1rem; }
   header .header-goback {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000; }
-  header .header-nav {
+  header .nav {
     display: flex;
     align-items: center;
     text-align: center;
@@ -591,85 +634,96 @@ header {
     background-color: #f6f6f6;
     padding: 0 1rem 3rem 1rem;
     width: inherit; }
-    header .header-nav .header-nav__titre-2, header .header-nav .header-nav__description {
+    header .nav .nav__titre-2,
+    header .nav .nav__description {
       width: inherit; }
-    header .header-nav .header-nav-bouton {
+    header .nav .nav-bouton {
       margin-top: 2rem;
       height: 2.5rem;
       width: 100%; }
-      header .header-nav .header-nav-bouton .header-bouton__ancre {
-        display: block; }
+      header .nav .nav-bouton .nav__ancre {
+        display: block;
+        box-shadow: 0.3rem 0.3rem 0.5rem darkgray;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
+        header .nav .nav-bouton .nav__ancre:hover {
+          opacity: 0.9;
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+          box-shadow: 0.3rem 0.3rem 0.2rem darkgray; }
 
 /** Style pour ordinateur uniquement**/
 @media screen and (min-width: 992px) {
-  .header__logo {
+  .logo {
     height: 5rem; }
-    .header__logo .header-goback {
+    .logo .header-goback {
       width: 4.5rem;
       height: 4.5rem;
       line-height: 4.5rem; }
-      .header__logo .header-goback .header-goback__ancre {
+      .logo .header-goback .header-goback__ancre {
         display: block; }
-        .header__logo .header-goback .header-goback__ancre .header-goback__fa {
+        .logo .header-goback .header-goback__ancre .header-goback__fa {
           font-size: 1.2rem; }
-    .header__logo .header-logo__image {
+    .logo .logo__conteneur {
       width: 100%;
       height: 100%;
       padding: 1rem; }
-      .header__logo .header-logo__image .header-logo__img {
+      .logo .logo__conteneur .logo__image {
         height: 100%;
         width: 18rem; }
   .header__image {
     height: 25rem; }
-  .header-bouton__ancre {
+  .nav__ancre {
     line-height: 2.5rem;
     width: 20rem;
     font-size: 1.1rem; } }
 
 /** Style pour tablette uniquement */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .header__logo {
+  .logo {
     height: 3.5rem; }
-    .header__logo .header-goback {
+    .logo .header-goback {
       width: 3.5rem;
       height: 3.5rem;
       line-height: 3.5rem; }
-      .header__logo .header-goback .header-goback__ancre {
+      .logo .header-goback .header-goback__ancre {
         display: block; }
-        .header__logo .header-goback .header-goback__ancre .header-goback__fa {
+        .logo .header-goback .header-goback__ancre .header-goback__fa {
           font-size: 1.2rem; }
-    .header__logo .header-logo__image {
+    .logo .logo__conteneur {
       width: 100%;
       height: 100%;
       padding: 0.7rem; }
-      .header__logo .header-logo__image .header-logo__img {
+      .logo .logo__conteneur .logo__image {
         height: 100%;
         width: auto; }
   .header__image {
     height: 20rem; }
-  .header-bouton__ancre {
+  .nav__ancre {
     line-height: 2.5rem;
     width: 17rem;
     font-size: 1rem; } }
 
 /** Style pour téléphone uniquement */
 @media screen and (max-width: 767px) {
-  header .header__logo {
+  header .logo {
     height: 3rem; }
-    header .header__logo .header-goback {
+    header .logo .header-goback {
       width: 3rem;
       height: 3rem;
       line-height: 3rem; }
-    header .header__logo .header-logo__image {
+    header .logo .logo__conteneur {
       width: 100%;
       height: 100%;
       padding: 0.7rem; }
-      header .header__logo .header-logo__image .header-logo__img {
+      header .logo .logo__conteneur .logo__image {
         height: 100%;
         width: auto; }
   header .header__image {
     height: 15rem; }
-  header .header-bouton__ancre {
+  header .nav__ancre {
     line-height: 2.5rem;
     width: 14rem;
     font-size: 1rem; } }
@@ -685,6 +739,12 @@ header {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+@keyframes display_KF {
+  from {
+    z-index: 0; }
+  to {
+    z-index: 1000; } }
 
 main {
   width: inherit;
@@ -855,17 +915,17 @@ main {
   align-items: start;
   flex-wrap: wrap; }
 
-.restaurants-carte__image {
+.carte__conteneur {
   width: 100%;
   height: 10rem;
   position: relative; }
-  .restaurants-carte__image .restaurants-carte__img {
+  .carte__conteneur .carte__image {
     width: 100%;
     height: 100%;
     -webkit-border-radius: 1rem 1rem 0 0;
     -moz-border-radius: 1rem 1rem 0 0;
     border-radius: 1rem 1rem 0 0; }
-  .restaurants-carte__image .restaurants-carte__badge {
+  .carte__conteneur .carte__badge {
     -webkit-border-radius: 0.2rem;
     -moz-border-radius: 0.2rem;
     border-radius: 0.2rem;
@@ -878,19 +938,19 @@ main {
     top: 0.7rem;
     right: 0.7rem; }
 
-.restaurants-carte__description {
+.carte__description {
   width: 100%;
   position: relative;
   padding: 1rem;
   color: black; }
-  .restaurants-carte__description .restaurants-carte__fa {
+  .carte__description .carte__fa {
     position: absolute;
     top: 1rem;
     right: 1rem;
     font-size: 1.2rem; }
-    .restaurants-carte__description .restaurants-carte__fa.fa-heart {
+    .carte__description .carte__fa.fa-heart {
       color: transparent; }
-    .restaurants-carte__description .restaurants-carte__fa:active, .restaurants-carte__description .restaurants-carte__fa:hover {
+    .carte__description .carte__fa:active, .carte__description .carte__fa:hover {
       background: -webkit-linear-gradient(#FF79DA, #9356DC);
       -webkit-background-clip: text;
       background-clip: text;
@@ -905,7 +965,7 @@ main {
       .restaurants .restaurants__conteneur .restaurants__carte {
         width: 20rem;
         margin-bottom: 1rem; }
-        .restaurants .restaurants__conteneur .restaurants__carte .restaurants-carte__image {
+        .restaurants .restaurants__conteneur .restaurants__carte .carte__conteneur {
           height: 18rem; } }
 
 /** Style pour tablette*/
@@ -913,7 +973,7 @@ main {
   .restaurants__carte {
     width: 100%;
     margin-bottom: 1rem; }
-    .restaurants__carte .restaurants-carte__image {
+    .restaurants__carte .carte__conteneur {
       height: 18rem; } }
 
 /** Style pour téléphone */
