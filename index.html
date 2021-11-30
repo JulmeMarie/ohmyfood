@@ -6,13 +6,14 @@
     <meta charset="utf-8" />
     <!-- Permet l'adaptation de la surface aux tablettes et mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <script src="https://kit.fontawesome.com/6726bc436f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" media="screen" href="dist/css/style.css" type="text/css" />
 
 </head>
 
-<body>
-
+<body class="index-body">
     <!-- Entête de la page -->
     <header>
         <div class="logo">
@@ -111,6 +112,7 @@
                         </div>
                     </a>
                 </div>
+
             </div>
         </section>
     </main>
@@ -136,10 +138,12 @@
             </ul>
         </div>
     </footer>
-
+    <!--spinner loading-->
     <div class="site-chargement">
-        <div class="chargement__logo">ohmyfood</div>
-        <div class="chargement__info">Chargement en cours...</div>
+
+        <div class="spinner-left chargement__block">
+            <div class="spinner-right chargement__logo">ohmyfood</div>
+        </div>
     </div>
 </body>
 

@@ -1,24 +1,46 @@
 @keyframes menu_apparition_KF {
     from {
-        margin-top: 4em; 
+        visibility: hidden;
+        margin-top: 4em;
     }
-    to { margin-top: 1em;}
+    to {
+        visibility: visible;
+        margin-top: 0;
+    }
 }
 
 @keyframes rotation_KF {
-    from{
-        transform:rotate(0deg);
+    from {
+        transform: rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationLeft_KF {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
     }
 }
 
 @keyframes display_KF {
-    from{
-        z-index:0;
+    from {
+        z-index: 0;
     }
-    to{
-        z-index:1000;
+    to {
+        z-index: 1000;
+    }
+}
+
+@keyframes scrollY_KF {
+    from {
+        overflow-y: hidden;
+    }
+    to {
+        overflow-y: scroll;
     }
 }

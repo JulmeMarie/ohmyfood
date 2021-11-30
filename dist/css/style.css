@@ -314,73 +314,7 @@ le remplissage (padding), la bordure, mais pas la marge. */
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@keyframes menu_apparition_KF {
-  from {
-    margin-top: 4em; }
-  to {
-    margin-top: 1em; } }
-
-@keyframes rotation_KF {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes display_KF {
-  from {
-    z-index: 0; }
-  to {
-    z-index: 1000; } }
-
 /******************* POLICE ROBOTO******************/
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");
-  unicode-range: U+1F00-1FFF; }
-
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
-  unicode-range: U+0370-03FF; }
-
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
 /* latin */
 @font-face {
   font-family: 'Roboto';
@@ -389,22 +323,7 @@ le remplissage (padding), la bordure, mais pas la marge. */
   src: url(http://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
-/* gujarati */
-@font-face {
-  font-family: 'Shrikhand';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrGIKR4zg.woff2) format("woff2");
-  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Shrikhand';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrDYKR4zg.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
+/******************* POLICE SHRINKHAND******************/
 /* latin */
 @font-face {
   font-family: 'Shrikhand';
@@ -412,6 +331,38 @@ le remplissage (padding), la bordure, mais pas la marge. */
   font-weight: 400;
   src: url(http://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrA4KR.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@keyframes menu_apparition_KF {
+  from {
+    visibility: hidden;
+    margin-top: 4em; }
+  to {
+    visibility: visible;
+    margin-top: 0; } }
+
+@keyframes rotation_KF {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes rotationLeft_KF {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-360deg); } }
+
+@keyframes display_KF {
+  from {
+    z-index: 0; }
+  to {
+    z-index: 1000; } }
+
+@keyframes scrollY_KF {
+  from {
+    overflow-y: hidden; }
+  to {
+    overflow-y: scroll; } }
 
 .ancre {
   text-decoration: none;
@@ -430,8 +381,19 @@ le remplissage (padding), la bordure, mais pas la marge. */
   -moz-border-radius: 3rem;
   border-radius: 3rem;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0.3rem 0.3rem 0.5rem darkgray;
   cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  opacity: 0.9;
   width: 100%; }
+  .bouton:hover {
+    opacity: 1;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    box-shadow: 0.3rem 0.3rem 0.2rem darkgray; }
 
 .image {
   width: 100%;
@@ -470,8 +432,9 @@ main {
   width: 100%;
   background-color: white;
   padding: 0 1.5rem 1rem 1.5rem;
+  /** Style pour téléphone */
   /** Style pour tablette*/
-  /** Style pour téléphone */ }
+  /** Style pour Desktop*/ }
   .fonctionnement .fonctionnement__conteneur {
     background-color: white;
     display: flex;
@@ -512,22 +475,6 @@ main {
           -moz-transition: all 0.5s linear;
           transition: all 0.5s linear;
           color: #9356DC; }
-  @media screen and (min-width: 992px) {
-    .fonctionnement .conteneur__filtre {
-      margin-bottom: 1rem;
-      margin-right: 1.2rem;
-      font-size: 1rem;
-      padding-right: 1rem; }
-      .fonctionnement .conteneur__filtre .conteneur__fa {
-        margin: 0 0.5rem 0 1.5rem; } }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    .fonctionnement .conteneur__filtre {
-      margin-bottom: 1rem;
-      margin-right: 1.2rem;
-      font-size: 1rem;
-      padding-right: 1rem; }
-      .fonctionnement .conteneur__filtre .conteneur__fa {
-        margin: 0 0.5rem 0 1.5rem; } }
   @media screen and (max-width: 767px) {
     .fonctionnement .conteneur__filtre {
       line-height: 4rem;
@@ -536,6 +483,22 @@ main {
       width: 100%; }
       .fonctionnement .conteneur__filtre .conteneur__fa {
         margin: 0 1rem 0 2rem; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .fonctionnement .conteneur__filtre {
+      margin-bottom: 1rem;
+      margin-right: 1.2rem;
+      font-size: 1rem;
+      padding-right: 1rem; }
+      .fonctionnement .conteneur__filtre .conteneur__fa {
+        margin: 0 0.5rem 0 1.5rem; } }
+  @media screen and (min-width: 992px) {
+    .fonctionnement .conteneur__filtre {
+      margin-bottom: 1rem;
+      margin-right: 1.2rem;
+      font-size: 1rem;
+      padding-right: 1rem; }
+      .fonctionnement .conteneur__filtre .conteneur__fa {
+        margin: 0 0.5rem 0 1.5rem; } }
 
 footer {
   padding: 1rem;
@@ -560,19 +523,20 @@ footer {
     footer .footer .menu__ancre {
       color: white; }
 
-@media screen and (min-width: 992px) {
+/** Style pour téléphone */
+@media screen and (max-width: 767px) {
   .footer__logo {
-    font-size: 1.6rem; } }
+    font-size: 1.2rem; } }
 
 /** Style pour tablette*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .footer__logo {
     font-size: 1.4rem; } }
 
-/** Style pour téléphone */
-@media screen and (max-width: 767px) {
+/** Style pour Desktop*/
+@media screen and (min-width: 992px) {
   .footer__logo {
-    font-size: 1.2rem; } }
+    font-size: 1.6rem; } }
 
 .site-chargement {
   width: 100%;
@@ -589,16 +553,77 @@ footer {
   flex-direction: column;
   padding-top: 40vh;
   z-index: -1;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: display_KF;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: display_KF;
+  -moz-animation-timing-function: ease;
+  -moz-animation-iteration-count: 1;
   animation-duration: 3s;
   animation-name: display_KF;
   animation-timing-function: ease;
   animation-iteration-count: 1; }
   .site-chargement .chargement__logo {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    margin: 0.2rem;
     font-family: Shrikhand;
-    font-size: 2rem;
-    margin-bottom: 1rem; }
-  .site-chargement .chargement__info {
-    font-size: 1rem; }
+    font-size: 1rem;
+    border-radius: 50%;
+    -webkit-animation-name: rotation_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: rotation_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: rotation_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+  .site-chargement .chargement__block {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: solid #9356DC 0.3rem;
+    border-top: dotted #9356DC 0.3rem;
+    border-right: solid white 0.3rem;
+    -webkit-animation-name: rotationLeft_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: rotationLeft_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: rotationLeft_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+
+.index-body {
+  overflow-y: hidden;
+  -webkit-animation-duration: 9s;
+  -webkit-animation-name: scrollY_KF;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-duration: 9s;
+  -moz-animation-name: scrollY_KF;
+  -moz-animation-timing-function: ease;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-duration: 9s;
+  animation-name: scrollY_KF;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
 
 header {
   display: flex;
@@ -654,31 +679,27 @@ header {
           transition: all 0.5s linear;
           box-shadow: 0.3rem 0.3rem 0.2rem darkgray; }
 
-/** Style pour ordinateur uniquement**/
-@media screen and (min-width: 992px) {
-  .logo {
-    height: 5rem; }
-    .logo .header-goback {
-      width: 4.5rem;
-      height: 4.5rem;
-      line-height: 4.5rem; }
-      .logo .header-goback .header-goback__ancre {
-        display: block; }
-        .logo .header-goback .header-goback__ancre .header-goback__fa {
-          font-size: 1.2rem; }
-    .logo .logo__conteneur {
+/** Style pour téléphone uniquement */
+@media screen and (max-width: 767px) {
+  header .logo {
+    height: 3rem; }
+    header .logo .header-goback {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem; }
+    header .logo .logo__conteneur {
       width: 100%;
       height: 100%;
-      padding: 1rem; }
-      .logo .logo__conteneur .logo__image {
+      padding: 0.7rem; }
+      header .logo .logo__conteneur .logo__image {
         height: 100%;
-        width: 18rem; }
-  .header__image {
-    height: 25rem; }
-  .nav__ancre {
+        width: auto; }
+  header .header__image {
+    height: 15rem; }
+  header .nav__ancre {
     line-height: 2.5rem;
-    width: 20rem;
-    font-size: 1.1rem; } }
+    width: 14rem;
+    font-size: 1rem; } }
 
 /** Style pour tablette uniquement */
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -706,45 +727,31 @@ header {
     width: 17rem;
     font-size: 1rem; } }
 
-/** Style pour téléphone uniquement */
-@media screen and (max-width: 767px) {
-  header .logo {
-    height: 3rem; }
-    header .logo .header-goback {
-      width: 3rem;
-      height: 3rem;
-      line-height: 3rem; }
-    header .logo .logo__conteneur {
+/** Style pour ordinateur uniquement**/
+@media screen and (min-width: 992px) {
+  .logo {
+    height: 5rem; }
+    .logo .header-goback {
+      width: 4.5rem;
+      height: 4.5rem;
+      line-height: 4.5rem; }
+      .logo .header-goback .header-goback__ancre {
+        display: block; }
+        .logo .header-goback .header-goback__ancre .header-goback__fa {
+          font-size: 1.2rem; }
+    .logo .logo__conteneur {
       width: 100%;
       height: 100%;
-      padding: 0.7rem; }
-      header .logo .logo__conteneur .logo__image {
+      padding: 1rem; }
+      .logo .logo__conteneur .logo__image {
         height: 100%;
-        width: auto; }
-  header .header__image {
-    height: 15rem; }
-  header .nav__ancre {
+        width: 18rem; }
+  .header__image {
+    height: 25rem; }
+  .nav__ancre {
     line-height: 2.5rem;
-    width: 14rem;
-    font-size: 1rem; } }
-
-@keyframes menu_apparition_KF {
-  from {
-    margin-top: 4em; }
-  to {
-    margin-top: 1em; } }
-
-@keyframes rotation_KF {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes display_KF {
-  from {
-    z-index: 0; }
-  to {
-    z-index: 1000; } }
+    width: 20rem;
+    font-size: 1.1rem; } }
 
 main {
   width: inherit;
@@ -763,6 +770,58 @@ main {
 
 .presentation {
   margin-top: -3rem; }
+  .presentation .entrees,
+  .presentation .plats,
+  .presentation .desserts {
+    visibility: hidden; }
+  .presentation .entrees {
+    -webkit-animation-name: menu_apparition_KF;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0ms;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: menu_apparition_KF;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 0ms;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+    animation-name: menu_apparition_KF;
+    animation-duration: 1s;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+  .presentation .plats {
+    -webkit-animation-name: menu_apparition_KF;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1000ms;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: menu_apparition_KF;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 1000ms;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+    animation-name: menu_apparition_KF;
+    animation-duration: 1s;
+    animation-delay: 1000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+  .presentation .desserts {
+    -webkit-animation-name: menu_apparition_KF;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2000ms;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: menu_apparition_KF;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 2000ms;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+    animation-name: menu_apparition_KF;
+    animation-duration: 1s;
+    animation-delay: 2000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
   .presentation .presentation__description {
     width: 100%;
     position: relative;
@@ -771,12 +830,36 @@ main {
     -webkit-border-radius: 2rem 2rem 0 0;
     -moz-border-radius: 2rem 2rem 0 0;
     border-radius: 2rem 2rem 0 0; }
-    .presentation .presentation__description .presentation-description__fa {
+    .presentation .presentation__description .favori__icon {
+      cursor: pointer;
       position: absolute;
       top: 1.5rem;
       right: 2rem;
-      font-size: 1.5rem;
-      color: gray; }
+      height: 2rem;
+      width: 2rem;
+      background-color: transparent; }
+      .presentation .presentation__description .favori__icon .presentation-description__fa {
+        position: absolute;
+        left: 0.3rem;
+        top: 0.3rem;
+        font-size: 1.5rem;
+        color: gray;
+        transition: all 0.5s linear; }
+        .presentation .presentation__description .favori__icon .presentation-description__fa.fa-heart {
+          background: -webkit-linear-gradient(#FF79DA, #9356DC);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0; }
+        .presentation .presentation__description .favori__icon .presentation-description__fa.fa-heart-o {
+          opacity: 1;
+          z-index: 1; }
+      .presentation .presentation__description .favori__icon:active .fa-heart-o, .presentation .presentation__description .favori__icon:hover .fa-heart-o {
+        transition: all 0.5s linear;
+        opacity: 0; }
+      .presentation .presentation__description .favori__icon:active .fa-heart, .presentation .presentation__description .favori__icon:hover .fa-heart {
+        transition: all 0.5s linear;
+        opacity: 1; }
   .presentation .presentation__titre-3 {
     font-weight: lighter;
     color: gray;
@@ -793,15 +876,7 @@ main {
     align-items: start;
     flex-wrap: wrap;
     margin-top: 4rem;
-    animation-name: menu_apparition_KF;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    -webkit-animation-name: menu_apparition_KF;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: menu_apparition_KF;
-    -moz-animation-duration: 1s;
-    -moz-animation-timing-function: linear;
+    /*@include menu-apparition();*/
     margin-top: 1rem; }
     .presentation .presentation__conteneur .presentation__carte {
       margin-bottom: 1rem;
@@ -875,15 +950,16 @@ main {
       height: inherit;
       border: 0; }
 
-@media screen and (min-width: 992px) {
-  .presentation__conteneur {
-    justify-content: space-between; }
+/** Style pour téléphone */
+@media screen and (max-width: 767px) {
   .presentation__carte {
-    width: 30rem;
-    margin-right: 1rem; }
-  .description, .entrees, .plats, .desserts {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; } }
+    width: 100%; }
+  .description,
+  .entrees,
+  .plats,
+  .desserts {
+    padding-left: 0.7rem;
+    padding-right: 1rem; } }
 
 /** Style pour tablette*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -894,17 +970,25 @@ main {
     justify-content: space-between; }
   .presentation__carte {
     width: 23rem; }
-  .description, .entrees, .plats, .desserts {
+  .description,
+  .entrees,
+  .plats,
+  .desserts {
     padding-left: 1.5rem;
     padding-right: 1.5rem; } }
 
-/** Style pour téléphone */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 992px) {
+  .presentation__conteneur {
+    justify-content: space-between; }
   .presentation__carte {
-    width: 100%; }
-  .description, .entrees, .plats, .desserts {
-    padding-left: 0.7rem;
-    padding-right: 1rem; } }
+    width: 30rem;
+    margin-right: 1rem; }
+  .description,
+  .entrees,
+  .plats,
+  .desserts {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; } }
 
 .restaurants {
   padding: 0 1.3rem 1rem 1.3rem;
@@ -946,16 +1030,41 @@ main {
   .carte__description .carte__fa {
     position: absolute;
     top: 1rem;
+    font-size: 1.2rem;
     right: 1rem;
-    font-size: 1.2rem; }
+    transition: all 0.5s linear; }
     .carte__description .carte__fa.fa-heart {
-      color: transparent; }
-    .carte__description .carte__fa:active, .carte__description .carte__fa:hover {
       background: -webkit-linear-gradient(#FF79DA, #9356DC);
       -webkit-background-clip: text;
       background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
+    .carte__description .carte__fa.fa-heart-o {
+      opacity: 1;
+      background-color: white;
+      z-index: 1; }
+  .carte__description:active .fa-heart-o, .carte__description:hover .fa-heart-o {
+    transition: all 0.5s linear;
+    opacity: 0; }
+  .carte__description:active .fa-heart, .carte__description:hover .fa-heart {
+    transition: all 0.5s linear;
+    opacity: 1; }
 
+/** Style pour téléphone */
+@media screen and (max-width: 767px) {
+  .restaurants__carte {
+    margin-bottom: 1rem;
+    width: 100%; } }
+
+/** Style pour tablette*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .restaurants__carte {
+    width: 100%;
+    margin-bottom: 1rem; }
+    .restaurants__carte .carte__conteneur {
+      height: 18rem; } }
+
+/** Style pour Desktop*/
 @media screen and (min-width: 992px) {
   .restaurants {
     width: 99.7%; }
@@ -967,17 +1076,3 @@ main {
         margin-bottom: 1rem; }
         .restaurants .restaurants__conteneur .restaurants__carte .carte__conteneur {
           height: 18rem; } }
-
-/** Style pour tablette*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .restaurants__carte {
-    width: 100%;
-    margin-bottom: 1rem; }
-    .restaurants__carte .carte__conteneur {
-      height: 18rem; } }
-
-/** Style pour téléphone */
-@media screen and (max-width: 767px) {
-  .restaurants__carte {
-    margin-bottom: 1rem;
-    width: 100%; } }

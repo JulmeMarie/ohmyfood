@@ -1,47 +1,84 @@
-@import "../utils/variables";
-@import "../utils/keyframes";
-@import "../utils/mixins";
-@import "../utils/mixins-menu";
-
 main {
     width: inherit;
     background-color: $couleur-gris-clair;
     @include flex-left;
     z-index: 1000;
 }
+
+
 /*
 .entrees, .plats, .desserts, .restaurants {
     width: 100%;
 }*/
 
-.presentation-description__titre{
+.presentation-description__titre {
     font-family: $font-family-logo;
 }
 
 .presentation {
     margin-top: -3rem;
-
-    .presentation__description{
+    .entrees,
+    .plats,
+    .desserts {
+        visibility: hidden;
+    }
+    .entrees {
+        @include menu-apparition(0ms);
+    }
+    .plats {
+        @include menu-apparition(1000ms);
+    }
+    .desserts {
+        @include menu-apparition(2000ms);
+    }
+    .presentation__description {
         width: 100%;
         position: relative;
         color: black;
         background-color: $couleur-gris-clair;
         @include border-radius-top(2rem);
-
-        .presentation-description__fa{
+        .favori__icon {
+            cursor: pointer;
             position: absolute;
             top: 1.5rem;
             right: 2rem;
-            font-size: 1.5rem;
-            color: $couleur-grise-texte;
+            height: 2rem;
+            width: 2rem;
+            background-color: transparent;
+            .presentation-description__fa {
+                position: absolute;
+                left: 0.3rem;
+                top: 0.3rem;
+                font-size: 1.5rem;
+                color: $couleur-grise-texte;
+                transition: all 0.5s linear;
+                &.fa-heart {
+                    @include text-gradient();
+                    opacity: 0;
+                }
+                &.fa-heart-o {
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+            &:active,
+            &:hover {
+                .fa-heart-o {
+                    transition: all 0.5s linear;
+                    opacity: 0;
+                }
+                .fa-heart {
+                    transition: all 0.5s linear;
+                    opacity: 1;
+                }
+            }
         }
     }
     .presentation__titre-3 {
         font-weight: lighter;
         color: $couleur-grise-texte;
         text-transform: uppercase;
-     }
-
+    }
     .presentation__hr {
         width: 3rem;
         height: 0.2rem;
@@ -50,24 +87,19 @@ main {
         margin-top: -0.7rem;
         border: 0;
     }
-
-    .presentation__conteneur{
+    .presentation__conteneur {
         @include flex-left;
         margin-top: 4rem;
-        @include menu-apparition();
-       
+        /*@include menu-apparition();*/
         margin-top: 1rem;
-
-        .presentation__carte{
+        .presentation__carte {
             margin-bottom: 1rem;
             height: 4.7rem;
             align-items: flex-start;
-
             padding: 0.9rem;
             overflow: hidden;
             position: relative;
-
-            .presentation__carte__titre{
+            .presentation__carte__titre {
                 width: 90%;
                 overflow: hidden;
                 white-space: nowrap;
@@ -75,7 +107,6 @@ main {
                 float: left;
                 font-size: 1rem;
             }
-            
             .presentation-carte__description {
                 @include transition-all();
                 width: 83%;
@@ -87,52 +118,49 @@ main {
                 color: $couleur-grise-texte;
                 padding: 0;
             }
-
             .presentation-carte__prix {
                 width: 17%;
                 font-weight: bolder;
                 text-align: center;
                 font-size: 0.9rem;
             }
-            .presentation-carte__icon{
+            .presentation-carte__icon {
                 @include transition-all();
                 width: 20%;
                 background-color: $couleur-tertiaire;
-                height:100%;
-                text-align: center;  
+                height: 100%;
+                text-align: center;
                 position: absolute;
                 top: 0;
-                right:-20%;
-
-                .presentation-carte__fa{
+                right: -20%;
+                .presentation-carte__fa {
                     color: white;
                     font-size: 1.5rem;
                     margin-top: 1.5rem;
                 }
-                
             }
-            &:hover, &:active,&:target{
-                .presentation-carte__description{
+            &:hover,
+            &:active,
+            &:target {
+                .presentation-carte__description {
                     width: 60%;
                 }
-                .presentation-carte__icon{
+                .presentation-carte__icon {
                     right: 0%;
                 }
-                .presentation-carte__fa{
+                .presentation-carte__fa {
                     @include rotation();
                 }
             }
         }
     }
-
-    .presentation__form{
+    .presentation__form {
         width: 100%;
         height: 2.5rem;
         text-align: center;
         font-size: 0.9rem;
         margin-top: 1.5rem;
         margin-bottom: 2.5rem;
-    
         .presentation__bouton {
             width: 9rem;
             height: inherit;
@@ -140,48 +168,56 @@ main {
         }
     }
 }
-@media screen and (min-width: 992px){
-    .presentation__conteneur {
-        justify-content: space-between;
-    }
 
+
+/** Style pour téléphone */
+
+@media screen and (max-width: 767px) {
     .presentation__carte {
-        width: 30rem;
-        margin-right: 1rem;
+        width: 100%;
     }
-
-    .description, .entrees, .plats,.desserts {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+    .description,
+    .entrees,
+    .plats,
+    .desserts {
+        padding-left: 0.7rem;
+        padding-right: 1rem;
     }
 }
 
+
 /** Style pour tablette*/
-@media screen and (min-width:768px) and (max-width: 991px){
+
+@media screen and (min-width:768px) and (max-width: 991px) {
     .presentation__conteneur {
         @include flex-left;
         justify-content: space-between;
     }
-
     .presentation__carte {
         width: 23rem;
     }
-
-
-    .description, .entrees, .plats,.desserts {
+    .description,
+    .entrees,
+    .plats,
+    .desserts {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-/** Style pour téléphone */
-@media screen and (max-width: 767px){
-    .presentation__carte {
-        width: 100%;
+@media screen and (min-width: 992px) {
+    .presentation__conteneur {
+        justify-content: space-between;
     }
-
-    .description, .entrees, .plats,.desserts {
-        padding-left: 0.7rem;
-        padding-right: 1rem;
+    .presentation__carte {
+        width: 30rem;
+        margin-right: 1rem;
+    }
+    .description,
+    .entrees,
+    .plats,
+    .desserts {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }

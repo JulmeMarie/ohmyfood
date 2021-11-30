@@ -3,6 +3,14 @@
     color: white;
     @include border-radius-all(3rem);
     background: linear-gradient($couleur-secondaire, $couleur-primaire);
+    box-shadow: 0.3rem 0.3rem 0.5rem darkgray;
     cursor: pointer;
+    @include transition-all;
+    opacity: 0.9;
     width: 100%;
+    &:hover {
+        opacity: 1;
+        @include transition-all;
+        box-shadow: 0.3rem 0.3rem 0.2rem darkgray;
+    }
 }

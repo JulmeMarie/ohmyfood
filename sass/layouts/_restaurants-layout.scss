@@ -1,8 +1,5 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-
 .restaurants {
-    padding:0 1.3rem 1rem 1.3rem;
+    padding: 0 1.3rem 1rem 1.3rem;
     width: 100%;
 }
 
@@ -14,16 +11,14 @@
     width: 100%;
     height: 10rem;
     position: relative;
-
-    .carte__image{
+    .carte__image {
         @include dimension-fulfilled();
         @include border-radius-top(1rem);
     }
-
     .carte__badge {
         @include border-radius-all(0.2rem);
         background-color: #99E2D0ed;
-        color:green;
+        color: green;
         width: 4rem;
         height: 1.3rem;
         line-height: 1.3rem;
@@ -33,63 +28,79 @@
     }
 }
 
-.carte__description{
+.carte__description {
     width: 100%;
     position: relative;
     padding: 1rem;
     color: black;
-
     .carte__fa {
         position: absolute;
         top: 1rem;
-        right: 1rem;
         font-size: 1.2rem;
-        &.fa-heart{
-            color: transparent;
-        }
-        &:active, &:hover {                                
+        right: 1rem;
+        transition: all 0.5s linear;
+        &.fa-heart {
             @include text-gradient();
-            }  
+            opacity: 0;
+        }
+        &.fa-heart-o {
+            opacity: 1;
+            background-color: white;
+            z-index: 1;
+        }
+    }
+    &:active,
+    &:hover {
+        .fa-heart-o {
+            transition: all 0.5s linear;
+            opacity: 0;
+        }
+        .fa-heart {
+            transition: all 0.5s linear;
+            opacity: 1;
+        }
     }
 }
 
 
-@media screen and (min-width: 992px){
+/** Style pour téléphone */
+
+@media screen and (max-width: 767px) {
+    .restaurants__carte {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+
+/** Style pour tablette*/
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .restaurants__carte {
+        width: 100%;
+        margin-bottom: 1rem;
+        .carte__conteneur {
+            height: 18rem;
+        }
+    }
+}
+
+
+/** Style pour Desktop*/
+
+@media screen and (min-width: 992px) {
     .restaurants {
         width: 99.7%;
-
-        .restaurants__conteneur{
+        .restaurants__conteneur {
             width: inherit;
             justify-content: space-between;
-                
-            .restaurants__carte{
+            .restaurants__carte {
                 width: 20rem;
                 margin-bottom: 1rem;
-
                 .carte__conteneur {
                     height: 18rem;
                 }
             }
         }
-    }
-}
-
-/** Style pour tablette*/
-@media screen and (min-width:768px) and (max-width: 991px){
-    .restaurants__carte{
-        width: 100%;
-        margin-bottom: 1rem;
-
-        .carte__conteneur {
-            height: 18rem;
-        }
-    }    
-}
-
-/** Style pour téléphone */
-@media screen and (max-width: 767px){
-    .restaurants__carte{
-        margin-bottom: 1rem;
-        width: 100%;
     }
 }

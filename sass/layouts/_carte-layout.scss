@@ -1,9 +1,7 @@
-@import "../utils/variables";
-@import "../utils/mixins";
 .carte {
     background-color: white;
     @include flex-left;
     cursor: pointer;
     @include border-radius-all(1rem);
-   @include box-shadow-gray(); 
+    @include box-shadow-gray();
 }

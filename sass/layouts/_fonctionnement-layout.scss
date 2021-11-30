@@ -1,9 +1,7 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-
 .filtre {
-   @include box-shadow-gray(); 
+    @include box-shadow-gray();
 }
+
 .titre {
     font-weight: bolder;
 }
@@ -18,85 +16,75 @@ main {
 .fonctionnement {
     width: 100%;
     background-color: white;
-    padding:0 1.5rem 1rem 1.5rem;
-
-     
+    padding: 0 1.5rem 1rem 1.5rem;
     .fonctionnement__conteneur {
         background-color: white;
         @include flex-left;
-
-        .conteneur__filtre{
+        .conteneur__filtre {
             height: 4rem;
             line-height: 4rem;
             background-color: $couleur-gris-clair;
             @include transition-all;
-            @include border-radius-all(1rem);  
-            
-            .conteneur__fa{
+            @include border-radius-all(1rem);
+            .conteneur__fa {
                 color: gray;
                 @include transition-all;
             }
-            
-            .conteneur__badge{
+            .conteneur__badge {
                 width: 1.7rem;
                 height: 1.7rem;
                 line-height: 1.7rem;
-                margin-top:1.3rem;
+                margin-top: 1.3rem;
                 margin-left: -0.8rem;
-                @include border-radius-all(50%);  
+                @include border-radius-all(50%);
                 background-color: $couleur-primaire;
                 color: white;
                 float: left;
                 text-align: center;
-            } 
-            
-            &:hover{
+            }
+            &:hover {
                 background-color: rgba($color: $couleur-primaire, $alpha: 0.1);
-                .conteneur__fa{
+                .conteneur__fa {
                     @include transition-all;
                     color: $couleur-primaire;
-                } 
+                }
             }
         }
     }
-
-    @media screen and (min-width: 992px){
-        .conteneur__filtre{
-            margin-bottom: 1rem;
-            margin-right: 1.2rem;
-            font-size: 1rem;
-            padding-right: 1rem;
-    
-            .conteneur__fa{
-                margin:0 0.5rem 0 1.5rem;
-            } 
-        }     
-    }
-    /** Style pour tablette*/
-    @media screen and (min-width:768px) and (max-width: 991px){
-
-        .conteneur__filtre{
-            margin-bottom: 1rem;
-            margin-right: 1.2rem;
-            font-size: 1rem;
-            padding-right: 1rem;
-
-            .conteneur__fa{
-                margin:0 0.5rem 0 1.5rem;
-            } 
-        }  
-    }
-   /** Style pour téléphone */
-    @media screen and (max-width: 767px){
-        .conteneur__filtre{
+    /** Style pour téléphone */
+    @media screen and (max-width: 767px) {
+        .conteneur__filtre {
             line-height: 4rem;
             margin-bottom: 1rem;
             font-size: 1rem;
             width: 100%;
-    
-            .conteneur__fa{
-                margin:0 1rem 0 2rem;
+            .conteneur__fa {
+                margin: 0 1rem 0 2rem;
             }
-        } 
+        }
+    }
+    /** Style pour tablette*/
+    @media screen and (min-width:768px) and (max-width: 991px) {
+        .conteneur__filtre {
+            margin-bottom: 1rem;
+            margin-right: 1.2rem;
+            font-size: 1rem;
+            padding-right: 1rem;
+            .conteneur__fa {
+                margin: 0 0.5rem 0 1.5rem;
+            }
+        }
+    }
+    /** Style pour Desktop*/
+    @media screen and (min-width: 992px) {
+        .conteneur__filtre {
+            margin-bottom: 1rem;
+            margin-right: 1.2rem;
+            font-size: 1rem;
+            padding-right: 1rem;
+            .conteneur__fa {
+                margin: 0 0.5rem 0 1.5rem;
+            }
+        }
     }
 }

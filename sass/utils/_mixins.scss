@@ -27,11 +27,11 @@
     box-shadow: 0.3rem 0.3rem 0.5rem rgb(234, 234, 234);
 }
 
-@mixin  text-gradient {
-  background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
-  -webkit-background-clip: text;
-   background-clip: text;
-  -webkit-text-fill-color: transparent;
+@mixin text-gradient {
+    background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @mixin dimension-fulfilled {
@@ -43,13 +43,115 @@
     -webkit-animation-name: display_KF;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
-
-    -moz-animation-name:display_KF;
+    -moz-animation-name: display_KF;
     -moz-animation-duration: 0.5s;
     -moz-animation-timing-function: linear;
-
     animation-name: display_KF;
     animation-duration: 0.5s;
     animation-timing-function: linear;
-    
+}
+
+@mixin afficherLoading {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: display_KF;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 3s;
+    -moz-animation-name: display_KF;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-name: display_KF;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@mixin rendreScrollableY {
+    -webkit-animation-duration: 9s;
+    -webkit-animation-name: scrollY_KF;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-duration: 9s;
+    -moz-animation-name: scrollY_KF;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    animation-duration: 9s;
+    animation-name: scrollY_KF;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@mixin spinnerLeft() {
+    -webkit-animation-name: rotationLeft_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: rotationLeft_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: rotationLeft_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@mixin spinnerRight() {
+    -webkit-animation-name: rotation_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: rotation_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: rotation_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@mixin menu-apparition($delay) {
+    -webkit-animation-name: menu_apparition_KF;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: menu_apparition_KF;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: $delay;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+    animation-name: menu_apparition_KF;
+    animation-duration: 1s;
+    animation-delay: $delay;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@mixin rotation() {
+    -webkit-animation-name: rotation_KF;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotation_KF;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    animation-name: rotation_KF;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@mixin transition-all {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+@mixin goback-dimension($valeur) {
+    width: $valeur;
+    height: $valeur;
+    line-height: $valeur;
 }

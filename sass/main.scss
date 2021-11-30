@@ -1,13 +1,12 @@
 //vendors
 @import "vendors/normalize";
-//utils
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/keyframes"; 
-@import"utils/mixins-menu";
 //base
 @import "base/font-roboto";
 @import "base/font-shrikhand";
+//utils
+@import "utils/variables";
+@import "utils/keyframes";
+@import "utils/mixins";
 //component
 @import "components/ancreComponent";
 @import "components/badgeComponent";

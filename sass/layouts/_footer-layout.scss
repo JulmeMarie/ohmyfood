@@ -1,61 +1,57 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-
 footer {
-    padding:1rem;
-    background-color: rgb(53,53,53);
+    padding: 1rem;
+    background-color: rgb(53, 53, 53);
     color: white;
-
-    .footer{
+    .footer {
         flex-direction: column;
-
         .footer__logo {
             font-family: $font-family-logo;
         }
-
         .footer-menu {
             margin-top: 1rem;
             padding: 0;
             margin: 0;
-
-            .menu__item{
+            .menu__item {
                 margin-bottom: 0.5rem;
                 font-size: 1rem;
                 list-style: none;
-        
-                .menu__fa{
+                .menu__fa {
                     margin-right: 1rem;
-                    &.fa-handshake{
+                    &.fa-handshake {
                         font-size: 0.6rem;
                     }
                 }
             }
         }
-
-        .menu__ancre{
+        .menu__ancre {
             color: white;
-        } 
+        }
     }
 }
 
 
-
- @media screen and (min-width: 992px){
-    .footer__logo{
-        font-size: 1.6rem;
-    }
-}
-/** Style pour tablette*/
-@media screen and (min-width:768px) and (max-width: 991px){
-    .footer__logo{
-        font-size: 1.4rem;
-    }
-   
-}
 /** Style pour téléphone */
-@media screen and (max-width: 767px){
-    .footer__logo{
+
+@media screen and (max-width: 767px) {
+    .footer__logo {
         font-size: 1.2rem;
     }
 }
 
+
+/** Style pour tablette*/
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .footer__logo {
+        font-size: 1.4rem;
+    }
+}
+
+
+/** Style pour Desktop*/
+
+@media screen and (min-width: 992px) {
+    .footer__logo {
+        font-size: 1.6rem;
+    }
+}
