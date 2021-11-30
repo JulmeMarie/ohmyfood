@@ -1070,7 +1070,7 @@ main {
     .restaurants__carte .carte__conteneur {
       height: 18rem; } }
 
-/** Style pour Desktop*/
+/** Style pour Desktop (ordinateur)*/
 @media screen and (min-width: 992px) {
   .restaurants {
     width: 99.7%; }
