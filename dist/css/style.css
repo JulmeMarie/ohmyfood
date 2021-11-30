@@ -565,28 +565,7 @@ footer {
   animation-name: display_KF;
   animation-timing-function: ease;
   animation-iteration-count: 1; }
-  .site-chargement .chargement__logo {
-    position: absolute;
-    width: 6rem;
-    height: 6rem;
-    line-height: 6rem;
-    margin: 0.2rem;
-    font-family: Shrikhand;
-    font-size: 1rem;
-    border-radius: 50%;
-    -webkit-animation-name: rotation_KF;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-name: rotation_KF;
-    -moz-animation-duration: 0.5s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-    animation-name: rotation_KF;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; }
-  .site-chargement .chargement__block {
+  .site-chargement .cercle-chargement {
     position: relative;
     width: 7rem;
     height: 7rem;
@@ -606,6 +585,27 @@ footer {
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
+    .site-chargement .cercle-chargement .logo-chargement {
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      line-height: 6rem;
+      margin: 0.2rem;
+      font-family: Shrikhand;
+      font-size: 1rem;
+      border-radius: 50%;
+      -webkit-animation-name: rotation_KF;
+      -webkit-animation-duration: 0.5s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-name: rotation_KF;
+      -moz-animation-duration: 0.5s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: infinite;
+      animation-name: rotation_KF;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; }
 
 .index-body {
   overflow-y: hidden;
@@ -1029,9 +1029,9 @@ main {
   color: black; }
   .carte__description .carte__fa {
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     font-size: 1.2rem;
-    right: 1rem;
+    right: 0.5rem;
     transition: all 0.5s linear; }
     .carte__description .carte__fa.fa-heart {
       background: -webkit-linear-gradient(#FF79DA, #9356DC);
@@ -1043,12 +1043,18 @@ main {
       opacity: 1;
       background-color: white;
       z-index: 1; }
-  .carte__description:active .fa-heart-o, .carte__description:hover .fa-heart-o {
-    transition: all 0.5s linear;
-    opacity: 0; }
-  .carte__description:active .fa-heart, .carte__description:hover .fa-heart {
-    transition: all 0.5s linear;
-    opacity: 1; }
+  .carte__description .carte-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem; }
+    .carte__description .carte-icon:active .fa-heart-o, .carte__description .carte-icon:hover .fa-heart-o {
+      transition: all 0.5s linear;
+      opacity: 0; }
+    .carte__description .carte-icon:active .fa-heart, .carte__description .carte-icon:hover .fa-heart {
+      transition: all 0.5s linear;
+      opacity: 1; }
 
 /** Style pour téléphone */
 @media screen and (max-width: 767px) {

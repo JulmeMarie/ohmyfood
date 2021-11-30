@@ -35,9 +35,9 @@
     color: black;
     .carte__fa {
         position: absolute;
-        top: 1rem;
+        top: 0.5rem;
         font-size: 1.2rem;
-        right: 1rem;
+        right: 0.5rem;
         transition: all 0.5s linear;
         &.fa-heart {
             @include text-gradient();
@@ -49,15 +49,22 @@
             z-index: 1;
         }
     }
-    &:active,
-    &:hover {
-        .fa-heart-o {
-            transition: all 0.5s linear;
-            opacity: 0;
-        }
-        .fa-heart {
-            transition: all 0.5s linear;
-            opacity: 1;
+    .carte-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        &:active,
+        &:hover {
+            .fa-heart-o {
+                transition: all 0.5s linear;
+                opacity: 0;
+            }
+            .fa-heart {
+                transition: all 0.5s linear;
+                opacity: 1;
+            }
         }
     }
 }

@@ -9,18 +9,7 @@
     flex-direction: column;
     padding-top: 40vh;
     z-index: -1;
-    .chargement__logo {
-        position: absolute;
-        width: 6rem;
-        height: 6rem;
-        line-height: 6rem;
-        margin: 0.2rem;
-        font-family: $font-family-logo;
-        font-size: 1rem;
-        border-radius: 50%;
-        @include spinnerRight;
-    }
-    .chargement__block {
+    .cercle-chargement {
         position: relative;
         width: 7rem;
         height: 7rem;
@@ -29,6 +18,17 @@
         border-top: dotted $couleur-primaire 0.3rem;
         border-right: solid white 0.3rem;
         @include spinnerLeft;
+        .logo-chargement {
+            position: absolute;
+            width: 6rem;
+            height: 6rem;
+            line-height: 6rem;
+            margin: 0.2rem;
+            font-family: $font-family-logo;
+            font-size: 1rem;
+            border-radius: 50%;
+            @include spinnerRight;
+        }
     }
     @include afficherLoading;
 }
